@@ -1,0 +1,488 @@
+/* General styling for the navbar */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* .navbar{
+    height: 120px;
+    background-color: rgb(6, 6, 81);
+    position: sticky;
+    position: fixed;
+    top: 0;
+    align-items: center;
+    top: 0; left: 0; right: 0;
+    box-shadow: 0 2px 5px #333;
+    padding: 20px 5%;
+    justify-content: space-between;
+    
+  
+}
+ .logo{
+    padding: 24px 5%;
+    margin: 10px;
+    align-items: center;
+}
+.logo a{
+    font-size: 34px;
+    text-decoration: none;
+    color: white;
+}
+
+    .logo span{
+        font-family: monospace;
+        font-size: 34px;
+        
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline;
+        animation: blink-caret 0.75s step-end infinite;
+    }
+    @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: black; }
+    }
+
+.logo span{
+    color: #a3b48b;
+}
+.head .menu{
+    height: 10px;
+   align-items: center;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    
+}
+.menu ul li {
+    padding: 35px;
+    font-size: 20px;
+   
+    position: relative;
+
+}
+
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+
+}
+.menu ul li a:hover {
+    color: #333;
+    background-color: #fff;
+    border-radius: 10px;
+   
+}
+
+
+.dropdown{
+    display: none;
+}
+  
+.menu ul li:hover .dropdown{
+    display: block;
+    position: absolute;
+    right: 1%;
+    background-color: #333;
+
+}
+.dropdown ul{
+    display: block;
+    margin: 10px;
+}
+.dropdown ul li{
+    width: 100px;
+    padding: 14px;
+
+    
+} */
+ html body{
+    background-color: whitesmoke;
+ }
+ header{
+  padding: 20px 4%;
+  height: 95px;
+  width: 100%;
+  align-items: center; 
+  position: sticky;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  transition: background-color 0.4s ease-in-out;
+}
+  header.scrolled{
+   background-color: whitesmoke;
+    opacity: 0.98;
+  }
+  header.scrolled a{
+    color: #333;
+  }
+  .cover{
+    position: relative;
+    top: 0; left: 0; right: 0;
+    
+}
+.home{
+    width: 100%;
+    height: 90vh;
+    background-image: url(/images/Fitness\ Gym\ Facebook\ Cover.png) ;
+    background-position: 10%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    padding: 0 10%;
+    /* background: #081b29; */
+}
+.home-contain{
+    max-width: 600px;
+    color: aliceblue;
+}
+.home-contain h1{
+    position: relative;
+    font-size: 50px;
+    line-height: 1;
+    font-weight: 700;
+}
+.home-contain h1::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b295a;
+    animation: showRight 2s ease forwards;
+    animation-delay: .4s;
+
+}
+.home-contain h3::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #081b295a;
+    animation: showRight 2s ease forwards;
+    animation-delay: .5s;
+
+}
+.home-contain h3{
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+    color: #A09AE3;
+}
+.home-contain p{
+    margin: 20px 0 40px;
+    font-size: 16px;
+}
+.home-contain .btn-box{
+    display: flex;
+    justify-content: space-between;
+    width: 345px;
+    height: 50px;
+    /* background: #ffbd59; */
+}
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #A09AE3;
+    border: 2px solid #A09AE3;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.btn-box a:nth-child(2){
+    background: transparent;
+    color: #A09AE3;
+}
+.btn-box a:nth-child(2):hover{
+    color: #081b29;
+ }
+.btn-box a:nth-child(2)::before{
+    background: #A09AE3;
+ }
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box a:hover{
+    color: #A09AE3;
+}
+.btn-box a:hover::before{
+    width: 100%;
+}
+.home-sci{
+    position: absolute;
+    bottom :40px;  
+    width: 230px;
+    display: flex;
+    justify-content: space-between;
+    gap: 1px;
+    align-items: center;
+    /* background-color: #A09AE3; */
+}
+.home-sci a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30%;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #A09AE3;
+    border-radius: 50%;
+    background-color: #A09AE3;
+    text-decoration: none;
+}
+/* .home-imghover{
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 200vh;
+    height: 100%;
+    background: transparent;
+    
+    transition: 3s;
+}
+.home-imghover:hover{
+    background: #292a2b;
+    opacity: .7;
+} */
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
+nav ul{
+    width: 100%;
+    float: left;
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    align-items: center;
+ 
+}
+
+ nav ul li{
+    font-size: 20px;
+   
+ }
+ nav li{
+    position: relative;
+ }
+ nav a{
+    text-decoration: none;
+    padding: 15px 15px;
+    color: whitesmoke;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    transition: color 0.3s ease-in-out;
+
+ }
+ 
+ nav li:hover a{
+    color: #A09AE3;
+
+ }
+ nav li::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #A09AE3;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out 0s;
+}
+nav :hover:before{
+    visibility: visible;
+    width: 100%;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 555;
+    padding: 20px ;
+    background-color: black;
+    color: aliceblue;
+    /* backdrop-filter: blur(10px); */
+    box-shadow: -10px 0 10px rgb(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-button{
+    display: none;
+}
+.hideOnMobile{
+    flex-direction: row;
+}
+@media(max-width:800px){
+    .hideOnMobile{
+        display: none;
+       flex-direction: column;
+    }
+    .menu-button{
+        display: block;
+    }
+}
+@media(max-width : 400px){
+    .sidebar{
+        width: 100%;
+        
+    }
+   
+}
+/* @media screen and (max-width:800px){
+    #card{
+        
+        display: grid;
+        align-content: center;
+        gap: 30px;
+        place-content: center;
+        
+    } */
+
+
+#card{
+   border-radius: 20px;
+   box-shadow: 1px 1px 10px #333 ;
+   box-sizing: 0 0 1px;
+   border: 0 3px 0 0 solid #333;
+}
+#card lord-icon{
+    display: flex;
+    justify-content: center;
+    
+}
+#color-button{
+    background-color: purple;
+    color: aliceblue;
+}
+
+
+/* .card-img-top:nth-child(2){
+    transition-delay: 200ms;
+}
+.card-img-top:nth-child(3){
+    transition-delay: 300ms;
+}
+.card-img-top:nth-child(4){
+    transition-delay: 400ms;
+}
+.card-img-top:nth-child(5){
+    transition-delay: 600ms;
+} */
+.title{
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 800;
+    white-space: nowrap;
+    font-size: 30px;
+    padding: 10px 5%;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.big-icon lord-icon{
+    display: flex;
+    justify-content: center;
+    
+}
+main{
+    width: 100%;
+    
+}
+
+.contain-ani {
+    
+    width: 100%;
+    height: 60vh;
+    /* background-color: red; */
+}
+section{
+   
+    display: grid;
+    place-items: center;
+    align-content: center;
+    height: 60vh;
+    width: 100%;
+    /* background-color: whitesmoke; */
+   
+    
+}
+
+
+.hidden {
+    opacity: 0;
+    transform: translate(-50%);
+    transition: all 4s;
+  }
+  @media(prefer-reduced-motion){
+    .hidden{
+        transition: none;
+    }
+  }
+  .hidden.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  #contain{
+    width: 100%;
+    height: auto;
+    background-color: whitesmoke;
+    
+  }
+ 
+  body{
+    width: 100%;
+  }
+/* From Uiverse.io by vnuny */ 
+/* From Uiverse.io by boryanakrasteva */ 
+/* From Uiverse.io by Shaidend */ 
